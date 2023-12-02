@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --font-Arimo: 'Arimo', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
+}
+
+@layer base {
+    :root {
+      --primary: 48 100% 50%;
+      --primary-foreground: 270 8% 16%;
+      --container: 48 100% 95%;
+      --container-foreground: 270 1% 65%;
+      --background: 0 0% 100%;
+      --foreground: 270 8% 16%;
+    }
+
+    .dark {
+      --primary: 48 4% 55%;
+      --primary-foreground: 154 14% 62%;
+      --container: 215 18% 37%;
+      --container-foreground: 157 26% 46%;
+      --background: 0 2% 7%;
+      --foreground: 270 63% 95%;
+    }
+}
