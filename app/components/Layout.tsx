@@ -31,16 +31,16 @@ export function Layout({
 }: LayoutProps) {
   return (
     <>
-      <CartAside cart={cart} />
+      {/* <CartAside cart={cart} />
       <SearchAside />
       <MobileMenuAside menu={header.menu} shop={header.shop} />
-      <Header header={header} cart={cart} isLoggedIn={isLoggedIn} />
-      <main>{children}</main>
-      <Suspense>
+      <Header header={header} cart={cart} isLoggedIn={isLoggedIn} /> */}
+      <main className='bg-container min-h-screen m-0'>{children}</main>
+      {/* <Suspense>
         <Await resolve={footer}>
           {(footer) => <Footer menu={footer.menu} shop={header.shop} />}
         </Await>
-      </Suspense>
+      </Suspense> */}
     </>
   );
 }

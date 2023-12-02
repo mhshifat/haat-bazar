@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+  :root {
+    --primary: 48 100% 50%;
+    --primary-foreground: 270 8% 16%;
+    --container: 48 100% 95%;
+    --container-foreground: 0 0% 44%;
+    --background: 0 0% 100%;
+    --foreground: 270 8% 16%;
+
+    --font-Arimo: 'Arimo', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
+  }
+}
