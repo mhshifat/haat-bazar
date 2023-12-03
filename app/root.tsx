@@ -20,8 +20,9 @@ import {
 import type {CustomerAccessToken} from '@shopify/hydrogen/storefront-api-types';
 import favicon from '../public/favicon.svg';
 import resetStyles from './styles/reset.css';
-import appStyles from './styles/app.css';
+import tailwindStyles from './styles/tailwind.css';
 import {Layout} from '~/components/Layout';
+import Providers from './components/providers';
 
 /**
  * This is important to avoid re-fetching root queries on sub-navigations
@@ -47,7 +48,7 @@ export const shouldRevalidate: ShouldRevalidateFunction = ({
 export function links() {
   return [
     {rel: 'stylesheet', href: resetStyles},
-    {rel: 'stylesheet', href: appStyles},
+    {rel: 'stylesheet', href: tailwindStyles},
     {
       rel: 'preconnect',
       href: 'https://cdn.shopify.com',
@@ -121,7 +122,9 @@ export default function App() {
       </head>
       <body>
         <Layout {...data}>
-          <Outlet />
+          <Providers>
+            <Outlet />
+          </Providers>
         </Layout>
         <ScrollRestoration nonce={nonce} />
         <Scripts nonce={nonce} />
@@ -209,7 +212,7 @@ async function validateCustomerAccessToken(
   return {isLoggedIn, headers};
 }
 
-const MENU_FRAGMENT = `#graphql
+const MENU_FRAGMENT = `
   fragment MenuItem on MenuItem {
     id
     resourceId
@@ -235,7 +238,7 @@ const MENU_FRAGMENT = `#graphql
   }
 ` as const;
 
-const HEADER_QUERY = `#graphql
+const HEADER_QUERY = `
   fragment Shop on Shop {
     id
     name
@@ -266,7 +269,7 @@ const HEADER_QUERY = `#graphql
   ${MENU_FRAGMENT}
 ` as const;
 
-const FOOTER_QUERY = `#graphql
+const FOOTER_QUERY = `
   query Footer(
     $country: CountryCode
     $footerMenuHandle: String!
