@@ -5,7 +5,7 @@ export default function ProductCard() {
   return (
     <div
       className={cn(
-        'bg-background text-foreground max-w-[13.75rem] rounded-xl relative',
+        'relative max-w-[13.75rem] rounded-xl bg-background text-foreground',
       )}
     >
       <ProductCard.ImageWrapper />
@@ -17,7 +17,7 @@ export default function ProductCard() {
 
 ProductCard.ImageWrapper = () => {
   return (
-    <div className="bg-primary text-primary-foreground aspect-[3/2] rounded-tl-xl rounded-tr-xl overflow-hidden">
+    <div className="aspect-[3/2] overflow-hidden rounded-t-xl bg-primary text-primary-foreground">
       <ProductCard.Image />
     </div>
   );
@@ -31,27 +31,31 @@ ProductCard.Image = () => {
       loading="lazy"
       width={200}
       height={200}
-      className="object-contain w-full h-full object-bottom mix-blend-multiply rounded-tl-xl rounded-tr-xl"
+      className="h-full w-full rounded-t-xl object-contain object-bottom mix-blend-multiply"
     />
   );
 };
 
 ProductCard.Info = () => {
   return (
-    <div className="pt-[1.5625rem] pb-[0.625rem] px-[1.25rem]">
-      <h4 className="font-[500] font-Roboto text-container-foreground text-[1rem] leading-[120%]">
+    <div className="px-[1.25rem] pb-[0.625rem] pt-[1.5625rem]">
+      <h4
+        className={cn(
+          'font-Roboto text-[1rem] font-[500] leading-[120%] text-container-foreground',
+        )}
+      >
         Vendor
       </h4>
-      <h3 className="font-[600] font-Roboto text-[1.125rem] leading-[180%]">
+      <h3 className="font-Roboto text-[1.125rem] font-[600] leading-[180%]">
         Headphone
       </h3>
-      <div className="flex items-center gap-[0.625rem] mt-[0.25rem]">
-        <Badge className="font-[600] font-Arimo">20%</Badge>
-        <small className="text-[0.875rem] font-[500] line-through font-Arimo text-container-foreground">
+      <div className="mt-[0.25rem] flex items-center gap-[0.625rem]">
+        <Badge className="font-Arimo font-[600]">20%</Badge>
+        <small className="font-Arimo text-[0.875rem] font-[500] text-container-foreground line-through">
           $22.00
         </small>
       </div>
-      <p className="font-[600] font-Arimo text-[1.125rem] leading-[180%]">
+      <p className="font-Arimo text-[1.125rem] font-[600] leading-[180%]">
         $20.00
       </p>
     </div>
@@ -60,13 +64,13 @@ ProductCard.Info = () => {
 
 ProductCard.Actions = () => {
   return (
-    <div className="bg-container flex items-center gap-[0.625rem] absolute bottom-[-1.25rem] right-[-3.75rem] p-[0.9375rem] rounded-xl">
+    <div className="absolute bottom-[-1.25rem] right-[-3.75rem] flex items-center gap-[0.625rem] rounded-xl bg-container p-[0.9375rem]">
       <IconButton variant="primary-outlined" title="Add to Wishlist">
         <svg
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[1.375rem] h-[1.375rem]"
+          className="h-[1.375rem] w-[1.375rem]"
         >
           <g id="SVGRepo_bgCarrier" strokeWidth={0} />
           <g
@@ -100,7 +104,7 @@ ProductCard.Actions = () => {
           fill="#000000"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          className="fill-primary-foreground w-[1.375rem] h-[1.375rem]"
+          className="h-[1.375rem] w-[1.375rem] fill-primary-foreground"
         >
           <g id="SVGRepo_bgCarrier" strokeWidth={0} />
           <g
