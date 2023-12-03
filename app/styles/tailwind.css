@@ -14,4 +14,16 @@
     --font-Arimo: 'Arimo', sans-serif;
     --font-Roboto: 'Roboto', sans-serif;
   }
+
+  .dark {
+    --primary: 48 100% 50%;
+    --primary-foreground: 40 4% 21%;
+    --container: 40 1% 40%;
+    --container-foreground: 40 18% 71%;
+    --background: 40 7% 17%;
+    --foreground: 38 17% 76%;
+
+    --font-Arimo: 'Arimo', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
+  }
 }

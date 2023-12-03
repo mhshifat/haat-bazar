@@ -42,7 +42,7 @@ ProductCard.Info = () => {
       <h4 className="font-[500] font-Roboto text-container-foreground text-[1rem] leading-[120%]">
         Vendor
       </h4>
-      <h3 className="font-[600] font-Roboto text-primary-foreground text-[1.125rem] leading-[180%]">
+      <h3 className="font-[600] font-Roboto text-[1.125rem] leading-[180%]">
         Headphone
       </h3>
       <div className="flex items-center gap-[0.625rem] mt-[0.25rem]">
@@ -51,7 +51,7 @@ ProductCard.Info = () => {
           $22.00
         </small>
       </div>
-      <p className="font-[600] font-Arimo text-primary-foreground text-[1.125rem] leading-[180%]">
+      <p className="font-[600] font-Arimo text-[1.125rem] leading-[180%]">
         $20.00
       </p>
     </div>

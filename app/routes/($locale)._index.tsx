@@ -6,7 +6,7 @@ import type {
   FeaturedCollectionFragment,
   RecommendedProductsQuery,
 } from 'storefrontapi.generated';
-import ProductCard from '~/components/components/partials/product-card';
+import {ProductCard} from '~/components/partials';
 
 export const meta: MetaFunction = () => {
   return [{title: 'Hydrogen | Home'}];
