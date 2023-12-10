@@ -127,3 +127,7 @@ code {
   font-family: monospace;
   padding: 0.25rem;
 }
+
+.focus\:shadow-none:focus {
+  box-shadow: none !important;
+}
