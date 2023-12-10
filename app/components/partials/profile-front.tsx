@@ -4,7 +4,7 @@ import {IconButton} from '../ui';
 export default function ProfileFront() {
   return (
     <div className={cn("flex items-center justify-between ml-auto gap-2")}>
-      <h3 className={cn("capitalize text-[18px] font-[700] font-Arimo leading-[120%] -tracking-[0.0063rem]")}>Harry Jackson</h3>
+      <h3 className={cn("capitalize text-[18px] font-[700] font-Arimo leading-[120%] -tracking-[0.0063rem] text-container-foreground")}>Harry Jackson</h3>
       <IconButton>
         <svg className={cn("w-[22px] h-[22px]")} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="SVGRepo_bgCarrier" strokeWidth={0} />

@@ -9,7 +9,7 @@ export default function Search() {
     >
       <input
         className={cn(
-          'w-full h-full border-none outline-none focus:outline-none focus:border-none focus:shadow-none text-[18px] font-[400] font-Arimo text-foreground placeholder-text-container-foregorund',
+          'w-full h-full border-none outline-none focus:outline-none focus:border-none focus:shadow-none text-[18px] font-[400] font-Arimo bg-transparent text-foreground placeholder-container-foreground',
         )}
         type="text"
         placeholder="Search"
