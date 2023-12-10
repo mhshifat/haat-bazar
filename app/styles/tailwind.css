@@ -5,27 +5,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer base {
+  :root {
+    --primary: 48 100% 50%;
+    --primary-foreground: 270 8% 16%;
+    --container: 48 100% 95%;
+    --container-foreground: 0 0% 44%;
+    --background: 0 0% 100%;
+    --foreground: 270 8% 16%;
+
     --font-Arimo: 'Arimo', sans-serif;
     --font-Roboto: 'Roboto', sans-serif;
-}
+  }
 
-@layer base {
-    :root {
-      --primary: 48 100% 50%;
-      --primary-foreground: 270 8% 16%;
-      --container: 48 100% 95%;
-      --container-foreground: 270 1% 65%;
-      --background: 0 0% 100%;
-      --foreground: 270 8% 16%;
-    }
+  .dark {
+    --primary: 48 100% 50%;
+    --primary-foreground: 40 4% 21%;
+    --container: 40 1% 40%;
+    --container-foreground: 40 18% 71%;
+    --background: 40 7% 17%;
+    --foreground: 38 17% 76%;
 
-    .dark {
-      --primary: 48 4% 55%;
-      --primary-foreground: 154 14% 62%;
-      --container: 215 18% 37%;
-      --container-foreground: 157 26% 46%;
-      --background: 0 2% 7%;
-      --foreground: 270 63% 95%;
-    }
+    --font-Arimo: 'Arimo', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
+  }
 }
